@@ -1,0 +1,354 @@
+{
+  "report_version": "1.0",
+  "generated_at": "2026-08-08T02:43:54.373799+08:00",
+  "location": {
+    "city": "兰州",
+    "latitude": 36.06,
+    "longitude": 103.83
+  },
+  "period": {
+    "start": "2026-08-08",
+    "end": "2026-08-08"
+  },
+  "metrics": {
+    "temperature_max_c": 34.6,
+    "temperature_min_c": 14.3,
+    "temperature_mean_c": 23.3,
+    "humidity_mean_pct": 57.8,
+    "heat_index_max_c": 33.4,
+    "wbgt_max_c": 29.2,
+    "wind_chill_min_c": null,
+    "heatwave": {
+      "active": false,
+      "cma_standard_active": false,
+      "p95_standard_active": false,
+      "cma_days": 0,
+      "standard_used": "无",
+      "peak_tmax_c": 34.6,
+      "heatwave_dates": []
+    },
+    "coldwave": {
+      "active": false,
+      "cma_drop_active": false,
+      "p10_active": false,
+      "severe_cold_active": false,
+      "severe_cold_level": null,
+      "severe_cold_days": 0,
+      "standard_used": "无",
+      "min_tmin_c": 14.3
+    },
+    "freezing_days": 0,
+    "dtr_max_c": 14.3,
+    "low_humidity": false,
+    "air_quality": {
+      "aqi_value": 77.4,
+      "aqi_label": "良",
+      "aqi_primary_pollutant": "o3",
+      "iaqi": {
+        "pm2_5": 6.9,
+        "pm10": 15.3,
+        "so2": 1.2,
+        "no2": 6.0,
+        "o3": 77.4,
+        "co": 7.0
+      },
+      "pollutants": {
+        "pm2_5": {
+          "mean": 4.8,
+          "unit": "μg/m³",
+          "who_level": "达标(AQG)",
+          "who_level_en": "meets AQG",
+          "gb3095_2012_exceed": false
+        },
+        "pm10": {
+          "mean": 15.3,
+          "unit": "μg/m³",
+          "who_level": "达标(AQG)",
+          "who_level_en": "meets AQG",
+          "gb3095_2012_exceed": false
+        },
+        "ozone": {
+          "mean": 132.9,
+          "unit": "μg/m³",
+          "who_level": "低于过渡目标IT1(未达标)",
+          "who_level_en": "above AQG, below IT-1",
+          "gb3095_2012_exceed": false
+        },
+        "nitrogen_dioxide": {
+          "mean": 4.8,
+          "unit": "μg/m³",
+          "who_level": "达标(AQG)",
+          "who_level_en": "meets AQG",
+          "gb3095_2012_exceed": false
+        },
+        "sulphur_dioxide": {
+          "mean": 1.2,
+          "unit": "μg/m³",
+          "who_level": "达标(AQG)",
+          "who_level_en": "meets AQG",
+          "gb3095_2012_exceed": false
+        },
+        "carbon_monoxide": {
+          "mean": 0.28,
+          "unit": "mg/m³",
+          "who_level": "达标(AQG)",
+          "who_level_en": "meets AQG",
+          "gb3095_2012_exceed": false
+        }
+      },
+      "o3_mda8_max": 132.9
+    },
+    "vulnerability_score": 50.0,
+    "risk_score": 1.5,
+    "risk_level": "低风险",
+    "primary_hazard": "无显著天气风险",
+    "recommended_actions": [
+      "热指数33.4C达警戒级(32.2C)：午后减少户外活动，注意补水"
+    ],
+    "dtr_alert": true,
+    "evidence": [
+      {
+        "metric": "temperature_max_c",
+        "method": "ECMWF ERA5 再分析(Open-Meteo)",
+        "source": "doi:10.1002/qj.3803 (Hersbach 2020); 偏差<1C"
+      },
+      {
+        "metric": "heat_index_max_c",
+        "method": "NOAA/NWS Rothfusz 1990 多项式",
+        "source": "https://www.weather.gov/ama/heatindex; 已验证官方点"
+      },
+      {
+        "metric": "wbgt_max_c",
+        "method": "BoM简化: 0.567Ta+0.393e+3.94",
+        "source": "澳大利亚气象局官方; Leroyer 2018"
+      },
+      {
+        "metric": "heatwave",
+        "method": "CMA 35C x3d; Xu 2016 P95 综述(602引)",
+        "source": "doi:10.1016/j.envint.2016.02.007"
+      },
+      {
+        "metric": "coldwave",
+        "method": "CMA 24h降温8C; P10 x3d; 绝对严寒-15C",
+        "source": "GB/T 21987-2017; doi:10.1007/s00484-012-0545-7"
+      },
+      {
+        "metric": "wind_chill_min_c",
+        "method": "NOAA/NWS 2001 联合公式",
+        "source": "https://www.weather.gov/safety/cold-wind-chill-chart"
+      },
+      {
+        "metric": "aqi_value",
+        "method": "HJ 633-2012 六项IAQI最大; O3用MDA8",
+        "source": "HJ 633-2012 国标"
+      },
+      {
+        "metric": "air_quality.who_level",
+        "method": "WHO 2021 AQG 24h指南值",
+        "source": "https://www.who.int/publications/i/item/9789240034228"
+      },
+      {
+        "metric": "air_quality.pm25_mortality",
+        "method": "PM2.5每+10ug/m3 死亡+0.68%",
+        "source": "doi:10.1056/NEJMoa1817364 (Liu 2019 NEJM 1480引)"
+      },
+      {
+        "metric": "wbgt_survival_limit",
+        "method": "湿球35C生存极限",
+        "source": "doi:10.1073/pnas.0913352107 (Sherwood 2010 PNAS 1007引)"
+      },
+      {
+        "metric": "risk_level",
+        "method": "热冷40%+空气30%+脆弱30% (Gasparrini 2015)",
+        "source": "doi:10.1016/S0140-6736(14)62114-0 (2597引)"
+      },
+      {
+        "metric": "risk_level.interaction",
+        "method": "高温+污染交互 +0.3-0.5",
+        "source": "doi:10.1016/j.envint.2023.107825 (482城市 116引)"
+      },
+      {
+        "metric": "dtr_max_c",
+        "method": "日较差-死亡关联",
+        "source": "doi:10.1016/j.envres.2006.11.009 (Shanghai 176引)"
+      },
+      {
+        "metric": "low_humidity",
+        "method": "低温低湿-呼吸道感染",
+        "source": "doi:10.1016/j.rmed.2008.09.011 (296引)"
+      }
+    ]
+  },
+  "risk_summary": {
+    "risk_score": 1.5,
+    "risk_level": "低风险",
+    "primary_hazard": "无显著天气风险"
+  },
+  "at_risk_groups": [
+    "老年人(65+)",
+    "儿童(<5岁)",
+    "户外工作者",
+    "心脑血管/呼吸系统慢病患者",
+    "孕妇"
+  ],
+  "at_risk_details": [
+    {
+      "group": "老年人(65+)",
+      "reason": "体温调节能力下降，高温相关死亡脆弱性显著(Sci Adv 2025; WHO)",
+      "action": "高温天减少外出，保持室内降温，注意补水(WHO建议)"
+    },
+    {
+      "group": "儿童(<5岁)",
+      "reason": "体温调节系统未发育完全，高温下脱水风险高(WHO)",
+      "action": "避免正午户外活动，注意补水(WHO建议)"
+    },
+    {
+      "group": "户外工作者",
+      "reason": "高温暴露时间长，热射病风险高(WHO/OSHA)",
+      "action": "错峰作业，定时休息补水，配备防暑物资(WHO建议)"
+    },
+    {
+      "group": "心脑血管/呼吸系统慢病患者",
+      "reason": "高温诱发疾病急性发作(Gasparrini 2015 Lancet)",
+      "action": "按时服药，症状加重及时就医"
+    },
+    {
+      "group": "孕妇",
+      "reason": "孕期体温调节负担增大(WHO)",
+      "action": "避免高温环境，减少外出"
+    }
+  ],
+  "warning_text": "【气候健康提示】兰州在2026-08-08~2026-08-08气候健康风险较低(评分1.5/5)。天气条件总体安全，建议维持日常健康防护，关注官方气象预报。 注意: 最高温34.6C已接近35C高温阈值，午后减少户外活动。热指数33.4C达NOAA'警戒'级(>=32.2C)，注意体感闷热。",
+  "recommended_actions": [
+    "热指数33.4C达警戒级(32.2C)：午后减少户外活动，注意补水"
+  ],
+  "uncertainty": {
+    "sources": [
+      "温度来自ERA5再分析(Hersbach 2020, doi:10.1002/qj.3803)，与地面观测偏差<1C；空间分辨率0.25，小于网格的社区被平滑",
+      "热指数为NOAA Rothfusz 1990经验公式近似值，高温高湿下误差增大",
+      "WBGT为BoM简化公式(无黑球温度)，户外直射下偏低1-2C",
+      "空气质量为CAMS再分析数据(融合卫星+地面站)；PM2.5每升10ug/m3总死亡风险+0.68%(Liu 2019 NEJM, 1480引)",
+      "J型曲线为示意性近似(Gasparrini 2015趋势)，真实曲线基于DLNM模型，此处不用于精确定量；风险评分权重(热冷40%+空气30%+脆弱30%)为复合矩阵设计",
+      "脆弱性数据为省级替代(第七次人口普查2020)，缺市级/社区级数据；本系统未纳入空调可及性、绿地覆盖率等适应资源数据"
+    ],
+    "statement": "本报告所有数值均来自公开数据源(Open-Meteo ERA5/CAMS)与科学公式，详见证据链章节。数据缺口和公式近似已如实声明，未编造任何数据。"
+  },
+  "fairness_check": {
+    "status": "已覆盖重点人群",
+    "covered_groups": [
+      "老年人(65+)",
+      "儿童(<5岁)",
+      "户外工作者",
+      "心脑血管/呼吸系统慢病患者",
+      "孕妇"
+    ],
+    "vulnerable_assessment": "脆弱性评分 50.0/100，基于第七次全国人口普查省级65+老年人口占比计算。本系统未纳入以下数据: 低收入社区分布、流动人口数据、空调可及性、绿地覆盖率。上述数据缺失可能导致弱势社区(老旧小区、流动人口聚集区)的风险被低估。",
+    "data_gaps": [
+      "低收入社区分布数据: 未纳入",
+      "流动人口数据: 未纳入",
+      "空调可及性(ac_proxy): 未纳入",
+      "绿地覆盖率(green_ratio): 未纳入",
+      "市级/社区级老年人口数据: 仅省级替代",
+      "纳凉点/取暖点分布: 未纳入"
+    ],
+    "red_flags": []
+  },
+  "evidence": [
+    {
+      "metric": "temperature_max_c",
+      "method": "ECMWF ERA5 再分析(Open-Meteo)",
+      "source": "doi:10.1002/qj.3803 (Hersbach 2020); 偏差<1C"
+    },
+    {
+      "metric": "heat_index_max_c",
+      "method": "NOAA/NWS Rothfusz 1990 多项式",
+      "source": "https://www.weather.gov/ama/heatindex; 已验证官方点"
+    },
+    {
+      "metric": "wbgt_max_c",
+      "method": "BoM简化: 0.567Ta+0.393e+3.94",
+      "source": "澳大利亚气象局官方; Leroyer 2018"
+    },
+    {
+      "metric": "heatwave",
+      "method": "CMA 35C x3d; Xu 2016 P95 综述(602引)",
+      "source": "doi:10.1016/j.envint.2016.02.007"
+    },
+    {
+      "metric": "coldwave",
+      "method": "CMA 24h降温8C; P10 x3d; 绝对严寒-15C",
+      "source": "GB/T 21987-2017; doi:10.1007/s00484-012-0545-7"
+    },
+    {
+      "metric": "wind_chill_min_c",
+      "method": "NOAA/NWS 2001 联合公式",
+      "source": "https://www.weather.gov/safety/cold-wind-chill-chart"
+    },
+    {
+      "metric": "aqi_value",
+      "method": "HJ 633-2012 六项IAQI最大; O3用MDA8",
+      "source": "HJ 633-2012 国标"
+    },
+    {
+      "metric": "air_quality.who_level",
+      "method": "WHO 2021 AQG 24h指南值",
+      "source": "https://www.who.int/publications/i/item/9789240034228"
+    },
+    {
+      "metric": "air_quality.pm25_mortality",
+      "method": "PM2.5每+10ug/m3 死亡+0.68%",
+      "source": "doi:10.1056/NEJMoa1817364 (Liu 2019 NEJM 1480引)"
+    },
+    {
+      "metric": "wbgt_survival_limit",
+      "method": "湿球35C生存极限",
+      "source": "doi:10.1073/pnas.0913352107 (Sherwood 2010 PNAS 1007引)"
+    },
+    {
+      "metric": "risk_level",
+      "method": "热冷40%+空气30%+脆弱30% (Gasparrini 2015)",
+      "source": "doi:10.1016/S0140-6736(14)62114-0 (2597引)"
+    },
+    {
+      "metric": "risk_level.interaction",
+      "method": "高温+污染交互 +0.3-0.5",
+      "source": "doi:10.1016/j.envint.2023.107825 (482城市 116引)"
+    },
+    {
+      "metric": "dtr_max_c",
+      "method": "日较差-死亡关联",
+      "source": "doi:10.1016/j.envres.2006.11.009 (Shanghai 176引)"
+    },
+    {
+      "metric": "low_humidity",
+      "method": "低温低湿-呼吸道感染",
+      "source": "doi:10.1016/j.rmed.2008.09.011 (296引)"
+    }
+  ],
+  "references": [
+    {
+      "id": "lancet2015",
+      "cite": "Gasparrini et al. 2015, The Lancet, doi:10.1016/S0140-6736(14)62114-0"
+    },
+    {
+      "id": "nejm2019",
+      "cite": "Liu et al. 2019, NEJM, doi:10.1056/NEJMoa1817364"
+    },
+    {
+      "id": "pnas2010",
+      "cite": "Sherwood & Huber 2010, PNAS, doi:10.1073/pnas.0913352107"
+    },
+    {
+      "id": "whoaqg2021",
+      "cite": "WHO 2021 AQG, https://www.who.int/publications/i/item/9789240034228"
+    },
+    {
+      "id": "gbd2019",
+      "cite": "GBD 2019 Risk Factors, The Lancet, doi:10.1016/S0140-6736(20)30752-2"
+    },
+    {
+      "id": "envint2023",
+      "cite": "Environ Int 2023, 482 cities, doi:10.1016/j.envint.2023.107825"
+    }
+  ]
+}
